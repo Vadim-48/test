@@ -1,0 +1,91 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="css/main.css")
+        title Dashboard
+    body
+        mixin tableCol(...div)
+                each item in div
+                    div.table__cell= item
+        .block    
+            aside.aside
+                .container
+                    .aside__nav
+                        a(href="#!").nav__logo.logo
+                            img(src="img/nav/logo.svg", alt="logo").logo__icon
+                            span.logo__title.title Dashboard
+                        .nav__menu
+                            a.menu__item Dashboard
+                            a.menu__item Product
+                            a.menu__item.active Customers
+                            a.menu__item Income
+                            a.menu__item Promote
+                            a.menu__item Help
+                    .aside__info.info
+                        img(src="img/nav/photo.png", alt="photo").info__icon
+                        .info__about 
+                            span.info__title.title Evano
+                            span.info__text.text Project Manager
+            section.customers
+                h1.customers__title.title Hello Evano 👋🏼,
+                .customers__table
+                    .table__caption-row
+                        .table__caption
+                            h2.table__title.title All Customers
+                            span.table__text.text Active Members
+                        .search-form
+                            button.search-forn__btn
+                                img.search-form__img(src="img/search.svg", alt="search")
+                            input.search-form__txt(type="text" placeholder="Search")    
+                    .table__body
+                        .table__row.table__head
+                            +tableCol('Customer Name', 'Company', 'Phone Number', 'Email', 'Country', 'Status')
+                        .table__row    
+                            +tableCol('Jane Cooper', 'Microsoft', '(225) 555-0118', 'jane@microsoft.com', 'United States')
+                            .table__cell.table__btn.table__active Active
+                    
+                            +tableCol('Floyd Miles', 'Yahoo', '(205) 555-0100', 'floyd@yahoo.com', 'Kiribati')
+                            .table__cell.table__btn Inactive
+                    
+                            +tableCol('Ronald Richards', 'Adobe', '(302) 555-0107', 'ronald@adobe.com', 'Israel')
+                            .table__cell.table__btn Inactive
+                    
+                            +tableCol('Marvin McKinney', 'Tesla', '(252) 555-0126', 'marvin@tesla.com', 'Iran')
+                            .table__cell.table__btn.table__active Active
+                    
+                            +tableCol('Jerome Bell', 'Google', '(629) 555-0129', 'jerome@google.com', 'Réunion')
+                            .table__cell.table__btn.table__active Active
+                    
+                            +tableCol('Kathryn Murphy', 'Microsoft', '(406) 555-0120', 'kathryn@microsoft.com', 'Curaçao')
+                            .table__cell.table__btn.table__active Active
+                    
+                            +tableCol('Jacob Jones', 'Yahoo', '(208) 555-0112', 'jacob@yahoo.com', 'Brazil')
+                            .table__cell.table__btn.table__active Active
+                    
+                            +tableCol('Kristin Watson', 'Facebook', '(704) 555-0127', 'kristin@facebook.com', 'Åland Islands')
+                            .table__cell.table__btn Inactive
+                    .table__foot 
+                        p.table__foot-text  Showing data 1 to 8 of  256K entries
+                        ul.btn__list 
+                            li 
+                                a.btn__page(href="#!")
+                                    img(src="img/arrow-left.svg", alt="") 
+                            li 
+                                a.btn__page.page-active(href="#!") 1
+                            li 
+                                a.btn__page(href="#!") 2
+                            li 
+                                a.btn__page(href="#!") 3
+                            li 
+                                a.btn__page(href="#!") 4
+                            li 
+                                a.btn__page.page-dots(href="#!") ...
+                            li 
+                                a.btn__page(href="#!") 40
+                            li 
+                                a.btn__page(href="#!") 
+                                    img(src="img/arrow-right.svg", alt="")  
+
+                

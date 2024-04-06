@@ -1,0 +1,133 @@
+.aside {
+    padding: 36px 26px 79px 30px;
+    background: #fff;
+    // height: 100%;
+    &__nav {
+
+    }
+
+    &__info {
+
+    }
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 565px;
+}
+.nav {
+
+    &__logo {
+        margin-bottom: 53px;
+    }
+
+    &__menu {
+        font-weight: 500;
+        // font-size: 14px;
+        @include adaptiv-value("font-size", 14, 8, 1); 
+        letter-spacing: -0.01em;
+        color: #9197b3;
+        margin-left: 2px;
+    }
+}
+
+.menu{
+
+    &__item{
+        display: grid;
+        grid-template-columns: 1fr 180px 1fr;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 19px;
+
+        border-radius: 8px;
+        max-width: 250px;
+        height: 46px;
+        padding: 11px;
+    }
+    &__item:after{
+        content: url('../img/nav/arrow.svg');
+    }
+    &__item:nth-child(1):before{
+        content: url('../img/nav/1-decor.svg');
+        margin-right: 14px;
+    }
+    &__item:nth-child(2):before{
+        content: url('../img/nav/2-decor.svg');
+        margin-right: 14px;
+    }
+    &__item:nth-child(3):before{
+        content: url('../img/nav/3-decor.svg');
+        margin-right: 14px;
+    }
+    &__item:nth-child(4):before{
+        content: url('../img/nav/4-decor.svg');
+        margin-right: 14px;
+    }
+    &__item:nth-child(5):before{
+        content: url('../img/nav/5-decor.svg');
+        margin-right: 14px;
+    }
+    &__item:nth-child(6):before{
+        content: url('../img/nav/6-decor.svg');
+        margin-right: 14px;
+    }
+    &__item:hover{
+        background: #5932ea;
+    }
+}
+
+.active{
+    color: #fff;
+    background: #5932ea;
+}
+
+.logo {
+    width: 195px;
+    align-items: center;
+    display: flex;
+
+    &__icon {
+        width: 32px;
+        margin-right: 8px;
+    }
+
+    &__title {
+        font-weight: 600;
+        // font-size: 26px;
+        @include adaptiv-value("font-size", 26, 18, 1); 
+        letter-spacing: 0.01em;
+    }
+}
+
+.info {
+    display: flex;
+
+    &__icon {
+        font-weight: 500;
+        // font-size: 14px;
+        @include adaptiv-value("font-size", 14, 8, 1); 
+        letter-spacing: 0.01em; 
+        margin-right: 12px;
+    }
+    &__about {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        letter-spacing: 0.01em; 
+        
+    }
+    &__title {
+        font-weight: 500;
+        // font-size: 14px;
+        @include adaptiv-value("font-size", 14, 8, 1); 
+    }
+
+    &__text {
+        font-weight: 400;
+        // font-size: 12px;
+        @include adaptiv-value("font-size", 12, 8, 1); 
+    }
+}
+
