@@ -94,6 +94,7 @@ body {
   padding: 36px 26px 79px 30px;
   background: #fff;
 }
+
 .container {
   display: flex;
   justify-content: space-between;
@@ -315,9 +316,16 @@ body {
   grid-template-rows: repeat(8, 69px);
   width: 863px;
 }
+.table__cell {
+  padding: 25px 0;
+  border-bottom: 1px solid #eee;
+}
 .table__head {
   color: #b5b7c0;
   grid-template-rows: 45px;
+}
+.table__head .table__cell {
+  padding: 15px 0;
 }
 .table__btn {
   display: flex;
@@ -397,5 +405,15 @@ body {
 @media (max-width: 1024px) and (max-width: 1360px) {
   .aside, .customers, .customers__table {
     padding: calc(10px + 30 * (100vw - 320px) / 1040);
+  }
+}
+@media (max-width: 1024px) {
+  .customers__title {
+    text-align: center;
+    margin: 20px auto;
+  }
+  .table__caption-row {
+    text-align: center;
+    display: block;
   }
 }

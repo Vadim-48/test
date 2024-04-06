@@ -27,4 +27,14 @@
         @include adaptiv-value("padding", 40, 10, 1); 
     }
 
+    .customers__title{
+        text-align: center;
+        margin: 20px auto;
+    }
+ 
+    .table__caption-row{
+        text-align: center;
+        display: block;
+    }
+
 }

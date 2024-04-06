@@ -82,11 +82,20 @@
         align-items: center;
         grid-template-rows: repeat(8, 69px) ;
         width: 863px;
+        // border: 1px solid #eee;
+    }
+    &__cell{
+        padding: 25px 0;
+        border-bottom: 1px solid #eee;
     }
 
     &__head{
         color: #b5b7c0;
         grid-template-rows: 45px ;
+    }
+
+    &__head &__cell{ 
+        padding: 15px 0;
     }
 
     &__btn{
